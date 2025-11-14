@@ -1,0 +1,190 @@
+/* --- Basic Setup --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+}
+
+/* --- Game Card --- */
+.game-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #0052D4;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* --- Difficulty Buttons --- */
+.difficulty-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.difficulty-btn {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100px;
+}
+
+.difficulty-btn:hover {
+    transform: translateY(-2px);
+}
+
+.difficulty-btn[data-difficulty="easy"] {
+    border-color: #28a745;
+    color: #28a745;
+}
+.difficulty-btn[data-difficulty="easy"]:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.difficulty-btn[data-difficulty="medium"] {
+    border-color: #ffc107;
+    color: #ffc107;
+}
+.difficulty-btn[data-difficulty="medium"]:hover {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.difficulty-btn[data-difficulty="hard"] {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+.difficulty-btn[data-difficulty="hard"]:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+
+/* --- Game Screen --- */
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+#difficulty-display {
+    text-transform: capitalize;
+    color: #007bff;
+}
+
+#question-box {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+#question {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#answer-input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* --- Game Over Modal --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+    color: #dc3545;
+    margin-top: 0;
+}
+
+#final-score {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0 20px;
+}
+
+#play-again-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#play-again-btn:hover {
+    background-color: #218838;
+}
+
+/* --- Helper Class --- */
+.hidden {
+    display: none;
+}
