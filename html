@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Masters HQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <div id="start-screen">
+            <h1>Math Masters HQ</h1>
+            <p>Select your challenge:</p>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <div class="game-stats">
+                <span>Score: <span id="score">0</span></span>
+                <span id="difficulty-display">Medium</span>
+                <span>Time: <span id="timer">30</span>s</span>
+            </div>
+
+            <div id="question-box">
+                <span id="question">What is 5 x 3?</span>
+            </div>
+
+            <input type="number" id="answer-input" placeholder="Enter your answer" autocomplete="off">
+            <button id="submit-btn">Submit</button>
+        </div>
+
+    </div>
+
+    <div id="game-over-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2>Time's Up!</h2>
+            <p>Your final score is:</p>
+            <span id="final-score">15</span>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
